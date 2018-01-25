@@ -29,3 +29,9 @@ org.gradle.daemon=true
 I got this issue because I had `node_modules2` that was my backup, I just remove it and remove all the cache and all done.
 
 [This post](https://github.com/facebook/react-native/issues/15789) also give me a lot of idea about how to fix it.
+
+## this._subscribableSubscriptions.forEach
+
+![issue print](_subscribableSubscriptions.png)
+
+Resolved in [react-native issue](https://github.com/facebook/react-native/issues/17348).
