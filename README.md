@@ -35,3 +35,24 @@ I got this issue because I had `node_modules2` that was my backup, I just remove
 ![issue print](./images/_subscribableSubscriptions.png)
 
 Resolved in [react-native issue](https://github.com/facebook/react-native/issues/17348).
+
+## How to change android versionNamber and versionName
+
+Google Play is not allow developers to upload the same version of application, so is necessary change version of your app to publish new release.
+
+To upadate version is necessary to change `versionCode` and `versionName` in `android/app/build.gradle` like:
+```
+android {
+
+    defaultConfig {
+
+        versionCode 1
+        versionName "1.0"
+
+        {...}
+    }
+
+    {...}
+}
+```
+[reference](https://stackoverflow.com/questions/35924721/how-to-update-version-number-of-react-native-app)
