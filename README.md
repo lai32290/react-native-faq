@@ -32,6 +32,6 @@ I got this issue because I had `node_modules2` that was my backup, I just remove
 
 ## this._subscribableSubscriptions.forEach
 
-![issue print](_subscribableSubscriptions.png)
+![issue print](./images/_subscribableSubscriptions.png)
 
 Resolved in [react-native issue](https://github.com/facebook/react-native/issues/17348).
