@@ -56,3 +56,20 @@ android {
 }
 ```
 [reference](https://stackoverflow.com/questions/35924721/how-to-update-version-number-of-react-native-app)
+
+## How to include decorator to use
+Some decorators could be very helpfull to development, like `autobind`, to use decorators in React Native is necessary to install `babel-plugin-transform-decorators-legacy`:
+```
+$ npm install --save-dev babel-plugin-transform-decorators-legacy
+```
+
+Then include it to babel plugin list, edit `<projectRoot>/.babelrc` file:
+```
+{
+   "presets": ["react-native"],
++  "plugins": ["transform-decorators-legacy"]
+}
+```
+
+Now your React Native project is supporting decorators.
+One of awesome decorator package that I use is [core-decorators](https://www.npmjs.com/package/core-decorators), it's including a lot of usuful decorators.
