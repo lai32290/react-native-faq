@@ -73,3 +73,21 @@ Then include it to babel plugin list, edit `<projectRoot>/.babelrc` file:
 
 Now your React Native project is supporting decorators.
 One of awesome decorator package that I use is [core-decorators](https://www.npmjs.com/package/core-decorators), it's including a lot of usuful decorators.
+
+## Metro Bundler can't listen on port 8081
+This issue is because is there some application is already using port 8081.
+
+### How to fix
+
+Find which process id (probably is another instance of `npm start`) and kill it:
+
+```
+// get process id by
+$ netstat -tulpn | grep :8081
+
+// kill process by id
+$ kill <your process id>
+```
+
+![can't listen on port 8081 error screenshot](./images/8081_in_use.png)
+
