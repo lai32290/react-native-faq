@@ -91,3 +91,16 @@ $ kill <your process id>
 
 ![can't listen on port 8081 error screenshot](./images/8081_in_use.png)
 
+## Failed to execute aapt
+Actually I wasn't able to fix this issue, I just found some way to work around it.
+
+Add following configs to `<project_root>/android/gradle.properties` and try to build again.
+
+```
+...
+android.enableAapt2=false
+```
+
+![Failed to execute aapt screenshot](./images/failed_to_execute_aapt.png)
+
+[Reference](https://github.com/react-navigation/react-navigation/issues/1976)
